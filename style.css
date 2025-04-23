@@ -1,0 +1,257 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?cinema,movie') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(46, 38, 38, 0.384);;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 22px;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Dark overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Glassmorphism Container */
+.container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #ffcc00;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #ffcc00;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* Compact Movie Grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px; 
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Glassmorphism Movie Cards */
+.movie-card {
+    background: rgba(255, 223, 186, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 15px;
+    text-align: center;
+    width: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.movie-card p {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #ffd700;
+    font-weight: 500;
+}
+
+.nav-links a {
+    background: #ffcc00;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background: #ffaa00;
+    text-decoration: none;
+}
+
+
+/* Responsive Grid for Tablets and Mobiles */
+@media screen and (max-width: 992px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-card {
+        width: 90%;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.auth-container h1 {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.auth-container button:hover {
+    background: #ffaa00;
+    transform: scale(1.03);
+}
+
+.auth-container p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-container a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container auth-container">
+    <h1>🔓 Login</h1>
+    <div class="form-group">
+      <input type="text" id="login-username" placeholder="Username" />
+    </div>
+    <div class="form-group">
+      <input type="password" id="login-password" placeholder="Password" />
+    </div>
+    <button onclick="loginUser()">Login</button>
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+  </div>
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = loginForm.email.value;
+      const password = loginForm.password.value;
+  
+      // Dummy check: Replace with your real auth logic if needed
+      if (email && password) {
+        // Set login flag
+        localStorage.setItem("isLoggedIn", "true");
+  
+        // Redirect to index page
+        window.location.href = "index.html";
+      } else {
+        alert("Please fill in all fields");
+      }
+    });
+  </script>
+  
+  <script src="auth.js"></script>
+</body>
+</html>

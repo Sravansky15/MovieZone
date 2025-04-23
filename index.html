@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Recommendation App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-left">
+      <div class="logo-icon">🎬</div>
+      <h1 class="logo-text">MovieZone</h1>
+    </div>
+    <div class="nav-links">
+      <a href="login.html" class="btn-nav">Login</a>
+      <a href="register.html" class="btn-nav">Register</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>🎬 Movie Recommendation Web App</h1>
+    <div class="search-section">
+      <input type="text" id="search-box" placeholder="Enter movie name..." />
+      <button onclick="searchMovie()">🔍 Search</button>
+    </div>
+    <div id="movie-details"></div>
+    <h2>🎥 Recommended Movies</h2>
+    <div id="recommendations" class="movie-grid"></div>
+  </div>
+
+  <!-- Indian Movies -->
+  <h2 class="section-title">🇮🇳 Top Indian Movies</h2>
+  <div id="indian-movies" class="movie-grid">
+    <div class="movie-card"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Jawan_film_poster.jpg/250px-Jawan_film_poster.jpg" alt="Jawan" /><p>Jawan (2023)</p></div>
+    <div class="movie-card"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/RRR_Poster.jpg/220px-RRR_Poster.jpg" alt="RRR" /><p>RRR (2022)</p></div>
+    <div class="movie-card"><img src="https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg" alt="3 Idiots" /><p>3 Idiots (2009)</p></div>
+    <div class="movie-card"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/K.G.F_Chapter_2.jpg/220px-K.G.F_Chapter_2.jpg" alt="KGF 2" /><p>KGF: Chapter 2 (2022)</p></div>
+    <div class="movie-card"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3I84wCRTf0lEnJBcXKdTnHGsKUUtptPZOKjar3x9F97SbbdInBh6oQ6j9eFo6c361C5iM" alt="Pushpa" /><p>Pushpa: The Rise (2021)</p></div>
+    <div class="movie-card"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwAZddfdsmgj84MRQyRDfNxl-swkZRxt2IQX3gnLkzHl3EEzyD3dduWibKdNCCqOTyaL3WIw" alt="Baahubali 2" /><p>Baahubali 2 (2017)</p></div>
+    <div class="movie-card"><img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Pathaan_film_poster.jpg?20231005041720" alt="Pathaan" /><p>Pathaan (2023)</p></div>
+    <div class="movie-card"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQrAj3X3l8pHj2TRRj7XL_6dz-pzxXeM6fZfKxhESWAKXnDJUMv7rA8BwMIbJSsfSHpHWrh" alt="Dangal" /><p>Dangal (2016)</p></div>
+    <div class="movie-card"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Kantara_poster.jpeg/250px-Kantara_poster.jpeg" alt="Kantara" /><p>Kantara (2022)</p></div>
+  </div>
+  <script>
+    // Check if the user is logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+  
+    if (isLoggedIn === "true") {
+      // Hide login/register buttons if user is logged in
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".login-btn").style.display = "none";
+        document.querySelector(".register-btn").style.display = "none";
+      });
+    }
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
